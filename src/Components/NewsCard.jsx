@@ -50,16 +50,15 @@ export const DefaultNewsCard = ({ news }) => {
                   letterSpacing={0.4}
                   sx={{ fontSize: "12px", fontWeight: 600 }}
                 >
-                  {" "}
                   Published by:{" "}
                   <a
-                    style={{ textDecoration: "none" }}
+                    style={{ textDecoration: "none", color: "#5d20d2" }}
                     href={news?.Link}
                     target="_blank"
                     rel="noreferrer"
                   >
                     {" "}
-                    {news?.domain}{" "}
+                    {news?.domain}
                   </a>
                 </Typography>
               </Stack>
@@ -67,6 +66,7 @@ export const DefaultNewsCard = ({ news }) => {
           </Grid>
           <Grid item xs={16} md={8}>
             <Box p={1} textAlign={"left"}>
+              <Typography sx={{ fontWeight: 600 }}>{news?.headline}</Typography>
               {news?.article_summary ? (
                 Array.isArray(news?.article_summary) ? (
                   <ul

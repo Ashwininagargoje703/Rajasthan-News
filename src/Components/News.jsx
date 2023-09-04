@@ -70,10 +70,15 @@ export const AllNews = () => {
         next={loadMoreNews}
         hasMore={hasMore}
         loader={
-          <p>
+          <Box
+            alignItems="center"
+            display="flex"
+            justifyContent="center"
+            height="100vh"
+          >
             {" "}
             <CircularProgress sx={{ color: "#5D20D2" }} disableShrink />
-          </p>
+          </Box>
         }
       >
         <Typography
